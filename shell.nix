@@ -1,14 +1,18 @@
 with import <nixpkgs> {};
-mkShell {
-  packages = [
-    cargo
-    rustc
-    rustfmt
-    rustPackages.clippy
-    rust-analyzer
-    bacon
+  mkShell {
+    packages = [
+      cargo
+      rustc
+      rustfmt
+      rustPackages.clippy
+      rust-analyzer
+      bacon
 
-    nixd
-    alejandra
-  ];
-}
+      ghc
+      ghcid
+      haskell-language-server
+
+      nixd
+      alejandra
+    ];
+  }
